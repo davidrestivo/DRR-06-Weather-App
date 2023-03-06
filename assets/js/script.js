@@ -82,9 +82,8 @@ function oldSearches() { //old search buttons
     for (let cnt2 = 0; cnt2 < storedCoordinates.length; cnt2++) { $('#' + cnt2).text(storedCoordinates[cnt2].city) };
 };
 
-
 function getCoord() { //city search
-    fetch('https://api.openweathermap.org/geo/1.0/direct?q=' + searchInp + ',US&limit=1&appid=d08b1379cfe23a7e58b700d18c0903c9', requestOptions)
+    fetch('https://api.openweathermap.org/geo/1.0/direct?q=' + searchInp + ',US&limit=1&appid=2dcb267b63ecfd7214a76fbb7b090231', requestOptions)
         .then(response => response.json())
         .then(result => {
             if (result.length < 1) {
@@ -106,7 +105,7 @@ function getCoord() { //city search
 
 function getAllWeather() { //current weather and forecast
 
-    fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=d08b1379cfe23a7e58b700d18c0903c9&units=imperial', requestOptions)
+    fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=2dcb267b63ecfd7214a76fbb7b090231&units=imperial', requestOptions)
         .then(response => response.json())
         .then(result => {
 
@@ -120,7 +119,7 @@ function getAllWeather() { //current weather and forecast
 
         })
         .then(
-            fetch('https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=d08b1379cfe23a7e58b700d18c0903c9&units=imperial', requestOptions)
+            fetch('https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=2dcb267b63ecfd7214a76fbb7b090231&units=imperial', requestOptions)
                 .then(response => response.json())
                 .then(result => {
                     for (var i = 1; i < 6; i++) {
