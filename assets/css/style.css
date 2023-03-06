@@ -1,0 +1,17 @@
+#navbar {
+    text-align: center;
+    font-size: xx-large;
+    width: 100vw;
+    margin: 0px;
+}
+
+.custom {
+    border: 1px solid #343a40;
+    border-radius: 4px;
+  
+}
+
+.add-project-btn {
+    display: flex;
+    justify-content: center;
+}
